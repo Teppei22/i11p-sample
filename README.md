@@ -18,3 +18,6 @@
 - sql/      # 初期化用 SQL
 - .../      # 各言語参考実装
 ```
+
+?キャッシュ？
+MYSQL_QUERY_LOGGER=1 bundle exec rackup
