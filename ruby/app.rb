@@ -45,9 +45,7 @@ class App < Sinatra::Base
     end
 
     def get_reservations(schedule)
-      # N+1クエリ
-      reservations = db.xquery(
-        # reservations = db.xquery('SELECT * FROM `reservations` WHERE `schedule_id` = ?', schedule[:id]).map do |reservation|
+      # reservations = db.xquery('SELECT * FROM `reservations` WHERE `schedule_id` = ?', schedule[:id]).map do |reservation|
       reservations = db.xquery(
         (
           'SELECT ' +
